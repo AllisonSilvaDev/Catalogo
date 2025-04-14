@@ -1,0 +1,86 @@
+.banner {
+    width: 100vw;
+    height: 550px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+
+    .info{
+        position: relative;
+        top: 50px;
+        left: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .logo{
+            p{
+                font-size: 25px;
+                letter-spacing: 5px;
+                position: relative;
+                top: 25px;
+            }
+            span{
+                color: red;
+            }
+        }
+        .movie{
+            img{
+                width: 600px;
+            }
+        }
+        .description{
+            width: 700px;
+        }
+        .quality{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            p{
+                font-size: 25px;
+            }
+            span{
+                color: red;
+            }
+        }
+        .button{
+            display: flex;
+            gap: 20px;
+            .Play{
+                padding: 10px 75px;
+                border-radius: 10px;
+                background-color: red;
+                font-size: 25px;
+                cursor: pointer;
+                transition: 0.5s all;
+            }
+            .Trailer{
+                padding: 10px 95px;
+                border-radius: 10px;
+                font-size: 25px;
+                color: black;
+                cursor: pointer;
+                transition: 0.5s all;
+            }
+            .Play:hover{
+                background-color: white;
+                color: black;
+                cursor: pointer;
+            }
+            .Trailer:hover{
+                background-color: rgb(255, 0, 0);
+                color: rgb(255, 255, 255);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.image {
+    width: 80%;
+
+    img {
+        width: 100%;  
+        -webkit-mask-image: linear-gradient(to right, transparent 10% , black 100%);
+        background-image: url(https://placecage.com/100/180);
+    }
+}
+
