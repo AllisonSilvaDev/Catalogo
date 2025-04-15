@@ -1,0 +1,6 @@
+.modalback{
+    position: fixed;
+    left: 30%;
+    width: 900px;
+    background-color: red;
+}

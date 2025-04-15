@@ -9,7 +9,7 @@ export default function Header() {
       </div>
       <div className="menu">
         <ul>
-          <li>Home</li>
+          <a href="/"><li>Home</li></a>
           <li>Assistir</li>
           <li>Séries</li>
           <li>Filmes</li>
