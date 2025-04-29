@@ -3,9 +3,10 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  color: white;
   list-style: none;
   font-family: Roboto;
+  text-decoration: none;
+  color: white;
 }
 
 body{

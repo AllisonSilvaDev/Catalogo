@@ -1,0 +1,27 @@
+.container-perfil{
+    .cardPerfil{
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        display: flex;
+        gap: 25px;
+        flex-direction: column;
+        transition: 0.4s all;
+        
+        img{
+            width: 100%;
+        }
+        .name{
+            text-align: center;
+            p{
+                color: #ccc;
+                font-weight: 600;
+            }
+        }
+        
+    }
+    .cardPerfil:hover{
+        scale: 105%;
+        cursor: pointer;
+    }
+}

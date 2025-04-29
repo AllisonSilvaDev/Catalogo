@@ -5,8 +5,9 @@ import Header from '../../components/cabecalho/Header'
 import { Card } from '../../components/card/card'
 import Modal from '../../components/modals/modal'
 import Footer from '../../components/footer/footer'
+import { Lista } from '../../components/lista/lista'
 
-function Serie() {
+function HomeSeries() {
 
   const [movies, setMovies] = useState([''])
   const [SelectedMovie, SetSelectedMovie] = useState(null)
@@ -16,7 +17,8 @@ function Serie() {
 
   useEffect(() => {
     const response = () => {
-      axios.get(`${API_URL}/search/movie?api_key=${API_KEY}&query=Spiderman&language=pt-BR`)
+      // axios.get(`${API_URL}/search/movie?api_key=${API_KEY}&query=shrek&language=pt-BR`)
+      axios.get(`${API_URL}/movie/now_playing?api_key=${API_KEY}&language=pt-BR&region=BR`)
         .then((response) => {
           console.log(response.data.results)
           setMovies(response.data.results)
@@ -90,4 +92,4 @@ function Serie() {
   )
 }
 
-export default Serie
+export default HomeSeries

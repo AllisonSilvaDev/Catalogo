@@ -5,6 +5,7 @@ import Header from '../../components/cabecalho/Header'
 import { Card } from '../../components/card/card'
 import Modal from '../../components/modals/modal'
 import Footer from '../../components/footer/footer'
+import { Lista } from '../../components/lista/lista'
 
 function Home() {
 
@@ -16,7 +17,8 @@ function Home() {
 
   useEffect(() => {
     const response = () => {
-      axios.get(`${API_URL}/movie/popular?api_key=${API_KEY}&language=pt-BR`)
+      // axios.get(`${API_URL}/search/movie?api_key=${API_KEY}&query=shrek&language=pt-BR`)
+      axios.get(`${API_URL}/movie/now_playing?api_key=${API_KEY}&language=pt-BR&region=BR`)
         .then((response) => {
           console.log(response.data.results)
           setMovies(response.data.results)
@@ -40,6 +42,7 @@ function Home() {
     <div className='container-geral'>
       <Header />
       <Banner />
+
       <div className="container-lista">
       <p>Assistir Novamente</p>
         <div className="movies">
@@ -54,6 +57,7 @@ function Home() {
           ))}
         </div>
       </div>
+      
       <div className="container-lista">
         <p>Series</p>
         <div className="movies">
@@ -68,6 +72,7 @@ function Home() {
           ))}
         </div>
       </div>
+
       <div className="container-lista">
       <p>Filmes</p>
         <div className="movies">
@@ -82,6 +87,7 @@ function Home() {
           ))}
         </div>
       </div>
+
       {SelectedMovie && <Modal movie={SelectedMovie} onClose={handleCloseModal} />} 
       <Footer/>
     </div>
